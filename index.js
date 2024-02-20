@@ -49,7 +49,7 @@ app.get('/usuarios',(req,res) => {
 app.post('/productos',(req,res) => {
     const data = fs.readFileSync('./productos.json','utf8');
     const productos = JSON.parse(data);
-    
+     
     productos.push(req.body);
 
     fs.writeFileSync('./productos.json',JSON.stringify(productos));
